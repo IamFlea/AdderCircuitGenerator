@@ -63,7 +63,7 @@ The algorithm calculates the prefix tree for the *last* output. Then creates inv
 
 This adder is not the fastest, yet it has the lowest wiring tracks and fanout, which decreases area and delay respectively. 
 
-![Brent Kung](http://slideplayer.com/slide/9189606/27/images/34/Brent-Kung+11:+Adders.jpg)
+![Brent Kung](http://player.slideplayer.com/17/5267198/data/images/img41.png)
 
 ### Kogge Stone
 Kogge Stone creates prefix tree graph for *each* output. 
@@ -71,7 +71,7 @@ Kogge Stone creates prefix tree graph for *each* output.
 This adder is considered as one of the fastest and largest (in the terms of area) adder. However in the last level, it has large amount of wiring tracks which may decrease the speed, see picture below.
 
 
-![Kogge Stone](http://slideplayer.com/slide/5267198/17/images/30/Kogge-Stone+17:+Adders.jpg)
+![Kogge Stone](http://player.slideplayer.com/17/5267198/data/images/img43.png)
 
 
 ### Sklansky
@@ -79,24 +79,24 @@ Sklansky calculates carry sum of the prefixes for each output.
 
 It is similar to KoggeStone yet the difference between them is in the fanout of nodes. See the last level in the picture below. It may have less used nodes, however, its delay grows with added fanout nodes. 
 
-![Sklansky](http://slideplayer.com/slide/5267198/17/images/29/Sklansky+17:+Adders.jpg)
+![Sklansky](http://player.slideplayer.com/17/5267198/data/images/img42.png)
 
 
 ### Han Carlson
 It is a combination of Kogge Stone and Brent Kung. The algorithm is partitioned into the three phases. In the first phase, we create a prefix tree of choosen depth and then we create the inverse tree in the last phase. The second phase has Kogge Stone architecture. 
 
 In the summary, Han Carlson Adders gives us a tradeoff between delay and wiring tracks. Below we can see its architecture with Brent-Kung of level 1.
-![Han Carlson](http://slideplayer.com/slide/9189606/27/images/40/Han-Carlson+11:+Adders.jpg)
+![Han Carlson](http://player.slideplayer.com/17/5267198/data/images/img45.png)
 
 ### Ladner Fischer
 Ladner Fischer Adder is a combination of Kogge Stone and Brent Kung. Similary to Han Carlson, the algorithm is partitioned into the three phases. However, the second phase has Sklansky architecture. 
 
 Ladner Fischer Adders give us a tradeoff between delay and fanout. Below we can see the architecture with Brent-Kung of level 1.
-![Ladner Fischer](http://slideplayer.com/slide/5267198/17/images/35/Ladner-Fischer+17:+Adders.jpg)
+![Ladner Fischer](http://player.slideplayer.com/17/5267198/data/images/img47.png)
 
 ### Knowles 
 This Adder is combination of KoggeStone and Sklansky adder. It gives us a tradeoff between wirings and fanouts. 
-![Knowles](http://slideplayer.com/slide/5267198/17/images/34/Knowles+[2,+1,+1,+1]+17:+Adders.jpg)
+![Knowles](http://player.slideplayer.com/17/5267198/data/images/img46.png)
 
 ## Usage and Examples
 ```python
