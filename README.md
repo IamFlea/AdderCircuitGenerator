@@ -86,16 +86,19 @@ It is similar to KoggeStone yet the difference between them is in the fanout of 
 It is a combination of Kogge Stone and Brent Kung. The algorithm is partitioned into the three phases. In the first phase, we create a prefix tree of choosen depth and then we create the inverse tree in the last phase. The second phase has Kogge Stone architecture. 
 
 In the summary, Han Carlson Adders gives us a tradeoff between delay and wiring tracks. Below we can see its architecture with Brent-Kung of level 1.
+
 ![Han Carlson](http://player.slideplayer.com/17/5267198/data/images/img45.png)
 
 ### Ladner Fischer
 Ladner Fischer Adder is a combination of Kogge Stone and Brent Kung. Similary to Han Carlson, the algorithm is partitioned into the three phases. However, the second phase has Sklansky architecture. 
 
 Ladner Fischer Adders give us a tradeoff between delay and fanout. Below we can see the architecture with Brent-Kung of level 1.
+
 ![Ladner Fischer](http://player.slideplayer.com/17/5267198/data/images/img47.png)
 
 ### Knowles 
 This Adder is combination of KoggeStone and Sklansky adder. It gives us a tradeoff between wirings and fanouts. 
+
 ![Knowles](http://player.slideplayer.com/17/5267198/data/images/img46.png)
 
 ## Usage and Examples
@@ -104,6 +107,8 @@ This Adder is combination of KoggeStone and Sklansky adder. It gives us a tradeo
 > bitwidth = 8
 > adder = KoggeStone(bitwidth)
 > print(adder)
+```
+```
 1 2 3 4 5 6 7 
 --------------
 0 1 2 3 4 5 6 
@@ -111,7 +116,8 @@ This Adder is combination of KoggeStone and Sklansky adder. It gives us a tradeo
       0 1 2 3 
 --------------
 1 2 3 4 5 6 7 
-
+```
+```python
 > adder.nodes, adder.delay, adder.fanout, adder.wiring
 (17, 3, 1, 4)
 > adder.cgp_nodes()
