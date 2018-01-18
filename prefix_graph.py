@@ -64,7 +64,7 @@ Description:
             
             Prefix Sequence
             ===============
-            In [5], authors presented a more compact datastructure - a string (a one  dimensional 
+            In [1], authors presented a more compact datastructure - a string (a one  dimensional 
             list of nodes). This script can transfer the sequence into the  2D  matrix.  However,
             2D matrix representation has larger searchspace  which  allows  to  cross  nontrivial 
             fanin signals. Eg. [[,,2,1][,,,][,,,][,,,]]  and which allows to  create  Kogge-Stone 
@@ -90,14 +90,7 @@ Description:
             We can create a different way of error calculation which penalizes not having access
             to the most significant previous bits. 
             
-References: [1] H. Stone, and P. Kogge: A  Parallel  Algorithm  for  the  Efficient  Solution  of
-                a General Class of Recurrence Equations, 1973,  IEEE Transactions on Computers
-            [2] D.  Patil,  O.  Azizi,  M.  Horowitz,  R.   Ho   and   R.   Ananthraman:   Robust
-                Energy-Efficient Adder Topologies, 2007, 18th IEEE Symposium on ARITH '07
-            [3] L. Sekanina: Evolvable Compnents ((doufám že to tam je))
-            [4] L. Li, and H. Zhou: On Error Modeling an Analysis of Approximate Adders, 2014,
-                IEEE ??
-            [5] S. Roy, M. Choudhury, R. Puri and D. Z. Pan,  "Towards  Optimal  Performance-Area 
+References: [1] S. Roy, M. Choudhury, R. Puri and D. Z. Pan,  "Towards  Optimal  Performance-Area 
                 Trade-Off in  Adders  by  Synthesis  of  Parallel  Prefix  Structures,"  in  IEEE 
                 Transactions on  Computer- Aided  Design  of  Integrated  Circuits  and  Systems, 
                 vol. 33, no. 10, pp. 1517-1530, Oct. 2014.
