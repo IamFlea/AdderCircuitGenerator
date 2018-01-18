@@ -101,7 +101,8 @@ This Adder is combination of KoggeStone and Sklansky adder. It gives us a tradeo
 
 ![Knowles](http://player.slideplayer.com/17/5267198/data/images/img46.png)
 
-## Usage and Examples
+## Usage
+Use Python 3.6 and better versions.
 ```python
 > from adders import *
 > bitwidth = 8
@@ -126,3 +127,14 @@ This Adder is combination of KoggeStone and Sklansky adder. It gives us a tradeo
 
 Result is obtrained by calling `adder.cgp_nodes()` which represents circuit as a list of operations in postfix notation ended by primary outputs. Primary inputs are two ranges of numbers. The first one represents an input vector `A` and its values are in the `range(0, bitwidth)`. The second one represents an input vector `B` and its values are in the `range(bitwidth, bitwidth*2)`. Then we assign indexes to each node in the list starting with `bitwidth*2` to `bitwidth*2 + len(chrom)`. Each node in the list is represented by two integers (pointing to primary inputs or previous node) and its operation. If this is not clear enough, please see some presentation about Cartesian Genetic Programming -- chromosome representation. 
 
+## Examples of Generating Adders
+```python
+> from adders import *
+> bitwidth = 16
+> level = 2
+> holy_trinity = [Sklansky(bitwidth), KoggeStone(bitwidth), BrentKung(bitwidth)
+> LadnerFischer(bitwidth, level)
+> HanCarlson(bitwidth, level)
+> Knowles(bitwidth, maxfanout=2)
+> Knowles(bitwidth, maxwiring=4)
+```
