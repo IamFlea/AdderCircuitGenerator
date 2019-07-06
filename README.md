@@ -147,7 +147,7 @@ Here is a brief example how to generate other adders.
 > from adders import *
 > bitwidth = 16
 > level = 2
-> holy_trinity = [Sklansky(bitwidth), KoggeStone(bitwidth), BrentKung(bitwidth)
+> holy_trinity = [Sklansky(bitwidth), KoggeStone(bitwidth), BrentKung(bitwidth)]
 > LadnerFischer(bitwidth, level)
 > HanCarlson(bitwidth, level)
 > Knowles(bitwidth, maxfanout=2)
