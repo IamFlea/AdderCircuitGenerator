@@ -32,13 +32,13 @@ Fig1: 4-bit Carry Ripple Adder P/G signals
 ```
       Example     Simplified    Matrix
 bit:  0 1 2 3     0 1 2 3
-      o o o o     o o o o       [0,  ,  ]
+      o o o o     o o o o
       |\| | |      \
-      o o o o     o o o o       [ , 1,  ]
+      o o o o     o o o o       [0,  ,  ]
       | |\| |        \
-      o o o o     o o o o       [ ,  , 2]
+      o o o o     o o o o       [ , 1,  ]
       | | |\|          \
-      o o o o     o o o o       
+      o o o o     o o o o       [ ,  , 2]
 ```
 
 Fig2: 4-bit Kogge-Stone Adder P/G signals
