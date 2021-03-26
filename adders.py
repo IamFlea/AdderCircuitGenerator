@@ -504,5 +504,5 @@ class RippleCarryBrentKung(BrentKung):
                 self.matrix[row_index][index] = value
             except IndexError: #else:
                 break
-print(KoggeStone(8).cgp_nodes())
+#print(KoggeStone(8).cgp_nodes())
 # End of file
