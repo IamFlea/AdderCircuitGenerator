@@ -17,7 +17,7 @@ print("\nKnowles 16 bitwidth, 4 max_wiring")
 print(Knowles(16, max_wiring=4))
 print("\nKnowles 16 bitwidth, 4 max_fanout")
 print(Knowles(16, max_fanout=4))
-print("\nKnowles 16 bitwidth, 4 max_fanout AND 4 max_wiring (not implemented)")
+print("\nKnowles 16 bitwidth, 4 max_fanout AND 4 max_wiring (Should print that it is not implemented)")
 try:
     print(Knowles(16, max_fanout=4, max_wiring=4))
 except NotImplementedError:
