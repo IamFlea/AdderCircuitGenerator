@@ -134,12 +134,14 @@ We can also see parameters of the adder.
 (17, 3, 1, 4)
 ```
 
-Resulting circuit is obtrained by calling `adder.cgp_nodes()` which represents circuit as a list of operations in postfix notation ended by primary outputs. Primary inputs are two ranges of numbers. The first one represents an input vector `A` and its values are in the `range(0, bitwidth)`. The second one represents an input vector `B` and its values are in the `range(bitwidth, bitwidth*2)`. Then we assign indexes to each node in the list starting with `bitwidth*2` to `bitwidth*2 + len(chrom)`. Each node in the list is represented by two integers (pointing to primary inputs or previous node) and its operation. If this is not clear enough, please see some presentation about Cartesian Genetic Programming -- chromosome representation. 
+Resulting circuit is obtained by calling `adder.cgp_nodes()` which represents circuit as a list of operations in postfix notation ended by primary outputs. Primary inputs are two ranges of numbers. The first one represents an input vector `A` and its values are in the `range(0, bitwidth)`. The second one represents an input vector `B` and its values are in the `range(bitwidth, bitwidth*2)`. Then we assign indexes to each node in the list starting with `bitwidth*2` to `bitwidth*2 + len(chrom)`. Each node in the list is represented by two integers (pointing to primary inputs or previous node) and its operation. If this is not clear enough, please see some presentation about Cartesian Genetic Programming -- chromosome representation. 
 
 ```python
 > adder.cgp_nodes()
 [[15, 7, 'AND'], [14, 6, 'AND'], [13, 5, 'AND'], [12, 4, 'AND'], [11, 3, 'AND'], [10, 2, 'AND'], [9, 1, 'AND'], [8, 0, 'AND'], [15, 7, 'XOR'], [14, 6, 'XOR'], [13, 5, 'XOR'], [12, 4, 'XOR'], [11, 3, 'XOR'], [10, 2, 'XOR'], [9, 1, 'XOR'], [8, 0, 'XOR'], [31, 22, 'AND'], [23, 32, 'OR'], [31, 30, 'AND'], [30, 21, 'AND'], [22, 35, 'OR'], [30, 29, 'AND'], [29, 20, 'AND'], [21, 38, 'OR'], [29, 28, 'AND'], [28, 19, 'AND'], [20, 41, 'OR'], [28, 27, 'AND'], [27, 18, 'AND'], [19, 44, 'OR'], [27, 26, 'AND'], [26, 17, 'AND'], [18, 47, 'OR'], [26, 25, 'AND'], [25, 16, 'AND'], [17, 50, 'OR'], [34, 39, 'AND'], [33, 52, 'OR'], [34, 40, 'AND'], [37, 42, 'AND'], [36, 55, 'OR'], [37, 43, 'AND'], [40, 45, 'AND'], [39, 58, 'OR'], [40, 46, 'AND'], [43, 48, 'AND'], [42, 61, 'OR'], [43, 49, 'AND'], [46, 51, 'AND'], [45, 64, 'OR'], [49, 16, 'AND'], [48, 66, 'OR'], [54, 65, 'AND'], [53, 68, 'OR'], [57, 67, 'AND'], [56, 70, 'OR'], [60, 51, 'AND'], [59, 72, 'OR'], [63, 16, 'AND'], [62, 74, 'OR'], [25, 16, 'XOR'], [26, 51, 'XOR'], [27, 67, 'XOR'], [28, 65, 'XOR'], [29, 75, 'XOR'], [30, 73, 'XOR'], [31, 71, 'XOR'], [69, 82, 81, 80, 79, 78, 77, 76, 24]]
 ```
+
+The circuit can be also trnaslated into a pseudocode by calling `adder.toPseudocode()`.
 
 ## Examples of Generating Adders
 Here is a brief example how to generate other adders. 

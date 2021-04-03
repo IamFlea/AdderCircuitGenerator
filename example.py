@@ -24,5 +24,7 @@ except NotImplementedError:
     print("This is not implemented")
 print("\nKnowles 16 bitwidth custum fanouts and wirings")
 print(Knowles(16, fanout_list=(1,1,4,2)))
-
+print("BrentKung 8 bitwidth")
+print(BrentKung(8).toPseudocode())
+print(BrentKung(8).toPseudocode(False)) # swap the endians
 #eof

@@ -422,4 +422,36 @@ class PrefixGraph(object):
 
             chrom[-1] = chrom[-1][::-1]
         return chrom
+
+    def toPseudocode(self, bigendian=True):
+        nodes = self.cgp_nodes(bigendian)
+        # Creates a list of variables 
+        var = [f"in{i}" for i in range(self.bitwidth*2)]
+        # create the pseudocode
+        operations = {
+            "AND": "&", 
+            "OR": "|",
+            "XOR": "^"
+            }
+        code = ""
+        for idx, node in enumerate(nodes[:-1]):
+            node_name = f"var{idx}"
+            code += f"{node_name} = {var[node[0]]} {operations[node[2]]} {var[node[1]]};\n"
+            var += [node_name]
+
+        # define outputs
+        outputs = [f"out{i}" for i,_ in enumerate(nodes[-1])]
+        outputsCnt = len(nodes[-1])
+        for idx, node in enumerate(nodes[-1]):
+            code += f"out{idx} = {var[node]};\n"
+
+        # give the result string
+        result = f"INPUTS: {var[:self.bitwidth*2]}\n" 
+        result += f"WIRES / VARIABLES: {var[self.bitwidth*2:-outputsCnt]}\n"
+        result += f"OUTPUTS: {outputs}\n\n"
+        result += code
+        return result
+
+
+
 # End of file
