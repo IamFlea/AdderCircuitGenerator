@@ -153,7 +153,7 @@ Here is a brief example how to generate other adders.
 > LadnerFischer(bitwidth, level)
 > HanCarlson(bitwidth, level)
 > Knowles(bitwidth, maxfanout=2)
-> Knowles(bitwidth, maxwiring=4)
+> Knowles(bitwidth, maxwiring=4).toPseudocode()
 ```
 
 If you have any other ideas, how to improve this script. Please, contact me. 
